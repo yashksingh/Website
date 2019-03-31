@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap 3 Fluid Layout Example</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<style>
+    form{
+    color:hsl(10,55%,20%);
+     background-color: hsl(140,25%,35%);
+  }
+
+  a{
+    color:hsl(0,55%,20%);
+  }
+  p{
+    font-size:1.5rem;
+  }
+h1:hover {
+    color:black;
+    background-color: yellow;
+
+}
+
+.yash{
+    border:20px solid #bdc3c7;
+    padding: 20px;
+    width: 700px;
+    margin: 20px auto; 
+    font-family: source sans pro;
+    background: lightyellow;
+}
+
+.quote{
+    border-left: 5px solid gray;
+    padding: 5px;
+}
+
+.date{
+    text-transform: uppercase;
+    color: #3498db;
+    letter-spacing: 0.2rem;
+}
+
+h3{
+    color: #2c3e50;
+    font-size: 2.0rem;
+}
+
+.post{
+    margin-bottom: 20px;
+}
+hr {
+    overflow: visible; /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+hr:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+
+}
+img{
+    width:600px;
+}
+
+:root {
+    --penguin-size: 300px;
+    --penguin-skin: black;
+    --penguin-belly: white;
+    --penguin-beak: orange;
+  }
+  
+  @media (max-width: 350px) {
+    :root {
+      
+      /* add code below */
+      
+      /* add code above */
+      
+    }
+  }
+  
+  .penguin {
+    position: relative;
+    margin: auto;
+    display: block;
+    margin-top: 5%;
+    width: var(--penguin-size, 300px);
+    height: var(--penguin-size, 300px);
+  }
+  
+  .right-cheek {
+    top: 15%;
+    left: 35%;
+    background: var(--penguin-belly, white);
+    width: 60%;
+    height: 70%;
+    border-radius: 70% 70% 60% 60%;
+  }
+  
+  .left-cheek {
+    top: 15%;
+    left: 5%;
+    background: var(--penguin-belly, white);
+    width: 60%;
+    height: 70%;
+    border-radius: 70% 70% 60% 60%;
+  }
+  
+  .belly {
+    top: 60%;
+    left: 2.5%;
+    background: var(--penguin-belly, white);
+    width: 95%;
+    height: 100%;
+    border-radius: 120% 120% 100% 100%;
+  }
+  
+  .penguin-top {
+    top: 10%;
+    left: 25%;
+    background: var(--penguin-skin, gray);
+    width: 50%;
+    height: 45%;
+    border-radius: 70% 70% 60% 60%;
+  }
+  
+  .penguin-bottom {
+    top: 40%;
+    left: 23.5%;
+    background: var(--penguin-skin, gray);
+    width: 53%;
+    height: 45%;
+    border-radius: 70% 70% 100% 100%;
+  }
+  
+  .right-hand {
+    top: 5%;
+    left: 25%;
+    background: var(--penguin-skin, black);
+    width: 30%;
+    height: 60%;
+    border-radius: 30% 30% 120% 30%;
+    transform: rotate(130deg);
+    z-index: -1;
+    animation-duration: 3s;
+    animation-name: wave;
+    animation-iteration-count: infinite;
+    transform-origin:0% 0%;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes wave {
+      10% {
+        transform: rotate(110deg);
+      }
+      20% {
+        transform: rotate(130deg);
+      }
+      30% {
+        transform: rotate(110deg);
+      } 
+      40% {
+        transform: rotate(130deg);
+      }  
+    }
+  
+  .left-hand {
+    top: 0%;
+    left: 75%;
+    background: var(--penguin-skin, gray);
+    width: 30%;
+    height: 60%;
+    border-radius: 30% 30% 30% 120%;
+    transform: rotate(-45deg);
+    z-index: -1;
+  }
+  
+  .right-feet {
+    top: 85%;
+    left: 60%;
+    background: var(--penguin-beak, orange);
+    width: 15%;
+    height: 30%;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(-80deg);
+    z-index: -2222;
+  }
+  
+  .left-feet {
+    top: 85%;
+    left: 25%;
+    background: var(--penguin-beak, orange);
+    width: 15%;
+    height: 30%;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(80deg);
+    z-index: -2222;
+  }
+  
+  .right-eye {
+    top: 45%;
+    left: 60%;
+    background: black;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;
+  }
+  
+  .left-eye {
+    top: 45%;
+    left: 25%;
+    background: black;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;
+  }
+  
+  .sparkle {
+    top: 25%;
+    left:-23%;
+    background: white;
+    width: 150%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  
+  .blush-right {
+    top: 65%;
+    left: 15%;
+    background: pink;
+    width: 15%;
+    height: 10%;
+    border-radius: 50%;
+  }
+  
+  .blush-left {
+    top: 65%;
+    left: 70%;
+    background: pink;
+    width: 15%;
+    height: 10%;
+    border-radius: 50%;
+  }
+  
+  .beak-top {
+    top: 60%;
+    left: 40%;
+    background: var(--penguin-beak, orange);
+    width: 20%;
+    height: 10%;
+    border-radius: 50%;
+  }
+  
+  .beak-bottom {
+    top: 65%;
+    left: 42%;
+    background: var(--penguin-beak, orange);
+    width: 16%;
+    height: 10%;
+    border-radius: 50%;
+  }
+  
+  body {
+    background:#c6faf1;
+  }
+  
+  .penguin * {
+    position: absolute;
+  }
+
+</style>
+</head>
+<body>
+<nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Tutorial Republic</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="http://www.tutorialrepublic.com" target="_blank">Home</a></li>
+                <li><a href="http://www.tutorialrepublic.com/about-us.php" target="_blank">About</a></li>
+                <li><a href="http://www.tutorialrepublic.com/contact-us.php" target="_blank">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="jumbotron">
+    <div class="container-fluid">
+        <h1>Learn to Create Websites</h1>
+        <p>In today's world internet is the most popular way of connecting with the people. At <a href="http://www.tutorialrepublic.com" target="_blank">tutorialrepublic.com</a> you will learn the essential of web development technologies along with real life practice example, so that you can create your own website to connect with the people around the world.</p>
+        <p><a href="http://www.tutorialrepublic.com" target="_blank" class="btn btn-success btn-lg">Get started today</a></p>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-4">
+            <h2>HTML</h2>
+            <p>HTML is a markup language that is used for creating web pages. The HTML tutorial section will help you understand the basics of HTML, so that you can create your own web pages or website.</p>
+            <p><a href="http://www.tutorialrepublic.com/html-tutorial/" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+        </div>
+        <div class="col-xs-4">
+            <h2>CSS</h2>
+            <p>CSS is used for describing the presentation of web pages. The CSS tutorial section will help you learn the essentials of CSS, so that you can fine control the style and layout of your HTML document.</p>
+            <p><a href="http://www.tutorialrepublic.com/css-tutorial/" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+        </div>
+        <div class="col-xs-4">
+            <h2>Bootstrap</h2>
+            <p>Bootstrap is a powerful front-end framework for faster and easier web development. The Bootstrap tutorial section will help you learn the techniques of Bootstrap so that you can create web your own website.</p>
+            <p><a href="http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-xs-12">
+            <footer>
+                <p>&copy; Copyright 2013 Tutorial Republic</p>
+            </footer>
+        </div>
+    </div>
+</div>
+<h1 style="color:steelblue;
+margin:20px auto;
+position: center;
+text-align: center;
+size: 8.0rem;
+">MY WEBPAGES!!!</h1>
+<form style="color:hsl(0,65%,20%);
+    background-color: hsl(140,55%,65%);">
+  
+    <legend>Select whatever u want:</legend>
+    <input id="one" type="radio" name="items" value="one">
+    <a href=" https://yashksingh.github.io/entertainment/"><b>JUST FOR ENTERTAINMENT - Songs n some pics</b></a><br>
+    <input id="two" type="radio" name="items" value="two">
+    <a href=" https://yashksingh.github.io/Web-Page/"><b>SIMPLE WEBPAGE - Basic WebPage</b></a><br>
+    <input id="three" type="radio" name="items" value="three">
+    <a href=" https://yashksingh.github.io/imagegal/"><b>IMAGE GALLERY - Some HD images</b></a>
+  
+</form>
+<hr>
+<h1 style="color:steelblue;
+margin:20px auto;
+
+position: center;
+text-align: center;">THESE ARE SOME SMALL PROJECTS</h1>
+<form>
+  <fieldset>
+    <legend>Select whatever u want:</legend>
+    <input id="one" type="radio" name="items" value="one">
+    <a href="  https://yashinternational.github.io/Color-Game/"><b>COLOR GAME - RGB COlOR Game</b></a><br>
+    <input id="two" type="radio" name="items" value="two">
+    <a href="  https://yashksingh.github.io/AGE-cal/"><b>AGE CALC - Basic calc</b></a><br>
+    <input id="three" type="radio" name="items" value="three">
+    <a href="  https://yashksingh.github.io/Guess-game/."><b>GUESS GAME - Best OF Luck!!</b></a><br>
+    <input id="four" type="radio" name="items" value="four">
+    <a href="https://yashksingh.github.io/Scorekeeping/."><b>ScoreKeEper - This is interesting </b></a>
+  </fieldset>
+</form>
+<hr>
+<h1 style="color:steelblue;
+margin:20px auto;
+position: center;
+text-align: center;"> SOME ANIMATIONS </h1>
+<form style="color:hsl(100,95%,70%);
+    background-color: hsl(40,15%,85%);">
+  <fieldset>
+    <legend>SeE These Animations:</legend>
+    <input id="one" type="radio" name="items" value="one">
+    <a href=" https://yashksingh.github.io/Skew/."><b>SKEW PROPERTY - Take the curser to the written text</b></a><br>
+    <input id="two" type="radio" name="items" value="two">
+    <a href="  https://yashksingh.github.io/Love/."><b> HEART - Calculate no. of beats per min.. </b></a><br>
+    <input id="three" type="radio" name="items" value="three">
+    <a href=" https://yashksingh.github.io/glowing-balls/."><b> BALLS - Glowing balls</b></a><br>
+    <input id="four" type="radio" name="items" value="four">
+    <a href="  https://yashksingh.github.io/Moving-Balls/."><b> MOVING BALLS - Which ball is moving faster than others?</b></a>
+  </fieldset>
+</form>
+<hr>
+
+<h1 style="color: #2c3e50;
+    font-size: 3.0rem;
+    background-color: lightpink;
+    "> BASIC INTRO TO BACON IPSUM </h1>
+<div class="yash">
+<div class="post">
+        <div class="date">november 23 2015</div>
+
+        <h3>This is My First Article</h3>
+        <img src="https://baconipsum.com/wp-content/themes/baconipsum-custom-theme-v2/images/bacon-ipsum-banner1.jpg"><br>
+        <br>
+
+        <p class="quote">Bacon ipsum dolor amet drumstick short loin venison pork hamburger pastrami cow t-bone buffalo jowl ribeye shankle ball tip short ribs. Venison beef porchetta, short loin prosciutto biltong short ribs pork belly bacon. Ground round pork belly picanha boudin. Pastrami short loin andouille turducken, beef ribs prosciutto strip steak kielbasa pork tri-tip. Tail porchetta landjaeger filet mignon pork belly burgdoggen.</p>
+        
+
+<p>Boudin capicola fatback turducken tenderloin landjaeger. Pastrami tenderloin strip steak spare ribs prosciutto. Salami leberkas tenderloin ribeye. Meatloaf doner andouille ham tongue pastrami cow bacon tri-tip. Jerky swine leberkas pastrami ribeye sirloin, tongue t-bone rump.</p>
+
+<p>Porchetta t-bone jerky, bresaola ribeye short ribs swine landjaeger bacon frankfurter ball tip kevin shankle. Ham beef ribs pork alcatra tri-tip landjaeger andouille. Shank ham hock tenderloin shankle bresaola. Picanha rump ham, swine turkey pastrami capicola filet mignon ribeye boudin shank.
+
+</p>
+
+
+
+
+<hr>
+
+    </div>
+    
+    <div class="post">
+        
+        <div class="date">10 december 2015</div><br>
+        <p class="quote">Buffalo sausage shankle pork chop brisket, tri-tip venison chicken capicola sirloin pork belly. Cupim rump filet mignon burgdoggen boudin pork loin. Venison pork belly fatback leberkas pork loin picanha. Pancetta shank cow tail shoulder. Shoulder doner tail, t-bone rump jerky bresaola. Jowl fatback sausage pork loin capicola filet mignon ball tip cupim shankle landjaeger. Hamburger shoulder pig swine tongue filet mignon capicola landjaeger boudin meatball burgdoggen turducken ham pork belly.
+            
+        </p>
+        <p>Ham hock pork loin corned beef, filet mignon prosciutto boudin kevin pork chop pig frankfurter ribeye. Ham tongue spare ribs, ground round chuck buffalo shank bacon. Meatloaf strip steak fatback tongue, tri-tip bacon shank doner tail chicken corned beef. Pig corned beef tenderloin capicola, venison flank drumstick short loin bacon.</p>
+
+<p>Does your lorem ipsum text long for something a little meatier? Give our generator a try… it’s tasty! 
+
+
+</p>
+
+
+    </div>
+
+</div>
+
+<h1 style="color:steelblue;
+margin:20px auto;
+background-color: white;
+position: center;
+text-align: center;
+
+     "><b> THE ENDDD!!!</b></h1>
+
+<div class="penguin">
+  <div class="penguin-bottom">
+    <div class="right-hand"></div>
+    <div class="left-hand"></div>
+    <div class="right-feet"></div>
+    <div class="left-feet"></div>
+  </div>
+  <div class="penguin-top">
+    <div class="right-cheek"></div>
+    <div class="left-cheek"></div>
+    <div class="belly"></div>
+    <div class="right-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="left-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="blush-right"></div>
+    <div class="blush-left"></div>
+    <div class="beak-top"></div>
+    <div class="beak-bottom"></div>
+  </div>
+</div>
+<hr>
+
+
+
+
+
+</body>
+</html>                                		
